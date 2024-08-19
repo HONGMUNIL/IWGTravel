@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Travel Destinations</title>
+</head>
+<body>
+    <h1>Travel Destinations</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Travel</th>
+                <th>Description</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="destination : ${listDestinations}">
+                <td th:text="${destination.name}">Destination Name</td>
+                <td th:text="${destination.description}">Destination Description</td>
+                <td th:text="${destination.location}">Destination Location</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="/showNewDestinationForm">Add New Destination</a>
+</body>
+</html>
