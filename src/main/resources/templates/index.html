@@ -4,15 +4,17 @@
     <title>Travel Destinations</title>
 </head>
 <body>
-    <h1>Travel Destinations</h1>
+    <h1>여행 다이어리</h1>
     <table border="1">
         <thead>
             <tr>
-                <th>Travel</th>
-                <th>Description</th>
-                <th>Location</th>
+                <th>여행지</th>
+                <th>내용</th>
+                <th>위치</th>
             </tr>
         </thead>
+
+
         <tbody>
             <tr th:each="destination : ${listDestinations}">
                 <td th:text="${destination.name}">Destination Name</td>
@@ -21,6 +23,6 @@
             </tr>
         </tbody>
     </table>
-    <a href="/showNewDestinationForm">Add New Destination</a>
+    <a href="/showNewDestinationForm">새 여행지 등록</a>
 </body>
 </html>
