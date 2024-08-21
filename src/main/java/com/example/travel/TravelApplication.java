@@ -4,6 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.example.travel.model.Destination;
+import com.example.travel.repository.DestinationRepository;
+
 import java.util.List;
 
 

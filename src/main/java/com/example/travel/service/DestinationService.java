@@ -20,4 +20,6 @@ public class DestinationService {
     public void addDestination(Destination destination) {
         destinationRepository.save(destination);
     }
+
+    
 }
