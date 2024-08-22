@@ -23,6 +23,15 @@
             </tr>
         </tbody>
     </table>
+
+    <h2>Reviews</h2>
+<ul>
+    <li th:each="review : ${destination.reviews}">
+        <p th:text="${review.content}">Review Content</p>
+        <p th:text="${review.rating}">Rating</p>
+    </li>
+</ul>
+
     <a href="/showNewDestinationForm">새 여행지 등록</a>
 </body>
 </html>
