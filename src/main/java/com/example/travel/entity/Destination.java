@@ -15,6 +15,11 @@ public class Destination {
     public String description;
     public String location;
 
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
+
+    
     public Destination() {
     }
 
