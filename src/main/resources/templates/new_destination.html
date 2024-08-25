@@ -28,6 +28,14 @@
         <button type="submit">Search</button>
     </form>
     
+    <form action="/category" method="get">
+        <select name="categoryId">
+            <option th:each="category : ${categories}" th:value="${category.id}" th:text="${category.name}"></option>
+        </select>
+        <button type="submit">Filter</button>
+    </form>
+
+    
     <a href="/">Back to Home</a>
 </body>
 </html>

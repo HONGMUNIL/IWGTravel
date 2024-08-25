@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 
 @Controller
@@ -18,7 +19,7 @@ public class DestinationController {
     private DestinationService destinationService;
 
     @Autowired
-    private DestinationService destinationService;
+    private CategoryService categoryService;
 
     @GetMapping("/search")
     public String searchDestinations(@RequestParam("keyword") String keyword, Model model) {
@@ -43,5 +44,12 @@ public class DestinationController {
     public String saveDestination(Destination destination) {
         destinationService.addDestination(destination);
         return "redirect:/";
+        
+    }
+    @GetMapping("/category/{id}")
+    public String getDestinationsByCategory(@PathVariable("id") Long categoryId, Model model) {
+        List<Destination> destinations = destinationService.getDestinationsByCategory(categoryId);
+        model.addAttribute("listDestinations", destinations);
+        return "index";
     }
 }
