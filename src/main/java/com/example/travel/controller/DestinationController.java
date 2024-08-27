@@ -1,6 +1,7 @@
 package com.example.travel.controller;
 
-import com.example.travel.model.Destination;
+import com.example.travel.entity.Destination;
+import com.example.travel.service.CategoryService;
 import com.example.travel.service.DestinationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
