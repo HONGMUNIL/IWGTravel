@@ -1,4 +1,4 @@
-package com.example.travelapp.model;
+package com.example.travel.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,7 +15,7 @@ public class Photo {
     private String description;
     private String fileName;
 
-    // Getters and setters
+   
     public Long getId() {
         return id;
     }

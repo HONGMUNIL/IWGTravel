@@ -37,6 +37,13 @@ public class PhotoService {
         photo.setFileName(fileName);
         return photoRepository.save(photo);
     }
+    public List<Photo> getAllPhotos() {
+        return photoRepository.findAll();
+    }
 
+    public Photo getPhoto(Long id) {
+        return photoRepository.findById(id)
+                .orElseThrow(() -> new PhotoNotFoundException(id));
+    }
   
 }
