@@ -25,5 +25,24 @@ public class FavoriteController {
         this.travelDestinationService = travelDestinationService;
     }
 
- 
+    @GetMapping
+    public String viewFavorites(Principal principal, Model model) {
+        User user = userService.findByUsername(principal.getName());
+        model.addAttribute("favorites", favoriteService.getUserFavorites(user));
+        return "favorites";
+    }
+
+    @PostMapping("/add")
+    public String addFavorite(@RequestParam Long destinationId, Principal principal) {
+        User user = userService.findByUsername(principal.getName());
+        TravelDestination destination = travelDestinationService.getDestinationById(destinationId);
+        favoriteService.addFavorite(user, destination);
+        return "redirect:/favorites";
+    }
+
+    @PostMapping("/remove")
+    public String removeFavorite(@RequestParam Long favoriteId) {
+        favoriteService.removeFavorite(favoriteId);
+        return "redirect:/favorites";
+    }
 }
