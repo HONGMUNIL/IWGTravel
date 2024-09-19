@@ -1,4 +1,4 @@
-package main.java.com.example.travel.entity;
+package com.example.travel.entity;
 
 import jakarta.persistence.*;
 import java.util.Set;

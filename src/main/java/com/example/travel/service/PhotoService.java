@@ -1,8 +1,8 @@
-package com.example.travelapp.service;
+package com.example.travel.service;
 
-import com.example.travelapp.exception.PhotoNotFoundException;
-import com.example.travelapp.model.Photo;
-import com.example.travelapp.repository.PhotoRepository;
+import com.example.travel.exception.PhotoNotFoundException;
+import com.example.travel.entity.Photo;
+import com.example.travel.repository.PhotoRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 

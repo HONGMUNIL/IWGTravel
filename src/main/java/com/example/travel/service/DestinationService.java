@@ -1,6 +1,6 @@
 package com.example.travel.service;
 
-import com.example.travel.model.Destination;
+import com.example.travel.entity.Destination;
 import com.example.travel.repository.DestinationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

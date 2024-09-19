@@ -1,9 +1,9 @@
 package com.example.travel.controller;
 
-import com.example.travel.model.User;
-import com.example.travel.model.TravelDestination;
+import com.example.travel.entity.User;
+import com.example.travel.entity.Destination;
 import com.example.travel.service.FavoriteService;
-import com.example.travel.service.TravelDestinationService;
+import com.example.travel.service.DestinationService;
 import com.example.travel.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

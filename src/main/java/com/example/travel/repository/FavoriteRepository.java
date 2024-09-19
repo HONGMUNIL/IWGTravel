@@ -1,7 +1,7 @@
 package com.example.travel.repository;
 
-import com.example.travel.model.Favorite;
-import com.example.travel.model.User;
+import com.example.travel.entity.Favorite;
+import com.example.travel.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
