@@ -17,12 +17,12 @@ public class FavoriteController {
 
     private final FavoriteService favoriteService;
     private final UserService userService;
-    private final TravelDestinationService travelDestinationService;
+    private final DestinationService travelDestinationService;
 
-    public FavoriteController(FavoriteService favoriteService, UserService userService, TravelDestinationService travelDestinationService) {
+    public FavoriteController(FavoriteService favoriteService, UserService userService, DestinationService travelDestinationService) {
         this.favoriteService = favoriteService;
         this.userService = userService;
-        this.travelDestinationService = travelDestinationService;
+        this.DestinationService = travelDestinationService;
     }
 
     @GetMapping
@@ -35,7 +35,7 @@ public class FavoriteController {
     @PostMapping("/add")
     public String addFavorite(@RequestParam Long destinationId, Principal principal) {
         User user = userService.findByUsername(principal.getName());
-        TravelDestination destination = travelDestinationService.getDestinationById(destinationId);
+        Destination destination = DestinationService.getDestinationById(destinationId);
         favoriteService.addFavorite(user, destination);
         return "redirect:/favorites";
     }
